@@ -1,4 +1,4 @@
-# Failsafe Library
+# Failsafe Helper Library
 
 Failsafe is a lightweight, zero-dependency library for handling failures in Java 8+. It works by intercepting failures and
 performing recovery logic via configurable strategies.
@@ -16,7 +16,7 @@ To use this Failsafe Utility library in your project, follow these steps:
 
 <repository>
     <id>github</id>
-    <url>https://maven.pkg.github.com/rohit-walia/failsafe</url>
+    <url>https://maven.pkg.github.com/rohit-walia/failsafe-helper</url>
     <snapshots>
         <enabled>true</enabled>
     </snapshots>
@@ -29,8 +29,8 @@ To use this Failsafe Utility library in your project, follow these steps:
 
 <dependency>
     <groupId>org.failsafe</groupId>
-    <artifactId>failsafe</artifactId>
-    <version>${failsafe.version}</version>
+    <artifactId>failsafe-helper</artifactId>
+    <version>${failsafe-helper.version}</version>
 </dependency>
 ```
 

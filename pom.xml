@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.failsafe</groupId>
-    <artifactId>failsafe</artifactId>
+    <artifactId>failsafe-helper</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>failsafe</name>
-    <description>Helper functions for Failsafe libray</description>
+    <description>Helper functions for Failsafe library</description>
 
     <modules>
         <module>core</module>
@@ -62,7 +62,7 @@
                     <configuration>
                         <skip>${skipChecks}</skip>
                         <includeTestSourceDirectory>true</includeTestSourceDirectory>
-                        <configLocation>../failsafe/.codequality/checkstyle.xml</configLocation>
+                        <configLocation>../failsafe-helper/.codequality/checkstyle.xml</configLocation>
                         <suppressionsLocation>.codequality/checkstyle-suppressions.xml</suppressionsLocation>
                         <failOnViolation>true</failOnViolation>
                         <maxAllowedViolations>0</maxAllowedViolations>
@@ -159,7 +159,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/rohit-walia/failsafe</url>
+            <url>https://maven.pkg.github.com/rohit-walia/failsafe-helper</url>
         </repository>
     </distributionManagement>
 
