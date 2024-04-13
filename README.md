@@ -8,33 +8,19 @@ offering a more user-friendly interface for developers to handle failures in Jav
 
 ## Installation
 
-To use this Failsafe Utility library in your project, follow these steps:
-
-1. Add following repository in your `settings.xml` file
-
-```xml
-
-<repository>
-    <id>github</id>
-    <url>https://maven.pkg.github.com/rohit-walia/failsafe-helper</url>
-    <snapshots>
-        <enabled>true</enabled>
-    </snapshots>
-</repository>
-```
-
-2. Add the Maven dependency to your pom.xml file. Make sure to use the latest version available:
+To use this Failsafe Utility library in your project, add below Maven dependency to your `pom.xml` file. Make sure to use the
+latest version available. This project is deployed to both
+the [Maven Central Repository](https://central.sonatype.com/artifact/io.github.rohit-walia/jacksonhelper) and the
+[GitHub Package Registry](https://github.com/rohit-walia?tab=packages&repo_name=jackson-helper).
 
 ```xml
 
 <dependency>
-    <groupId>org.failsafe</groupId>
+    <groupId>io.github.rohit-walia</groupId>
     <artifactId>failsafe-helper</artifactId>
     <version>${failsafe-helper.version}</version>
 </dependency>
 ```
-
-3. Run mvn install
 
 ## Usage Examples
 
