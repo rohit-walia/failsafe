@@ -4,16 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.failsafe</groupId>
+    <groupId>io.github.rohit-walia</groupId>
     <artifactId>failsafe-helper</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>pom</packaging>
 
-    <name>failsafe</name>
-    <description>Helper functions for Failsafe library</description>
-
     <modules>
-        <module>core</module>
+        <module>failsafehelper</module>
     </modules>
 
     <properties>
@@ -39,9 +36,13 @@
         <!-- plugin versions -->
         <failsafe.version>3.3.0</failsafe.version>
         <maven.surefire.version>3.0.0-M9</maven.surefire.version>
-        <logback.version>1.4.7</logback.version>
-        <lombok.version>1.18.26</lombok.version>
-        <junit.jupiter.version>5.9.2</junit.jupiter.version>
+        <maven.source.plugin.version>3.3.0</maven.source.plugin.version>
+        <maven.javadoc.plugin.version>3.6.3</maven.javadoc.plugin.version>
+        <maven-central-publishing.version>0.4.0</maven-central-publishing.version>
+        <maven-gpg.version>1.6</maven-gpg.version>
+        <logback.version>1.5.3</logback.version>
+        <lombok.version>1.18.30</lombok.version>
+        <junit-jupiter.version>5.10.1</junit-jupiter.version>
     </properties>
 
     <build>
@@ -120,7 +121,6 @@
     </build>
 
     <profiles>
-        <!-- FullBuild - to be run in Jenkins as a complete build with all options -->
         <profile>
             <id>FullBuild</id>
             <properties>
@@ -129,29 +129,13 @@
                 <skipBuildInfo>false</skipBuildInfo>
             </properties>
         </profile>
-
-        <!-- FastBuild - to be run on local without tests or style checks -->
         <profile>
             <id>FastBuild</id>
             <properties>
-                <!-- Properties to turn on specific profiles -->
                 <skipTests>true</skipTests>
                 <skipChecks>true</skipChecks>
                 <skipBuildInfo>true</skipBuildInfo>
             </properties>
-        </profile>
-
-        <!-- RunLocal - to run local app on package -->
-        <profile>
-            <id>RunLocal</id>
-            <properties>
-                <skipTests>true</skipTests>
-                <skipChecks>true</skipChecks>
-                <skipBuildInfo>false</skipBuildInfo>
-            </properties>
-            <build>
-                <defaultGoal>package</defaultGoal>
-            </build>
         </profile>
     </profiles>
 
