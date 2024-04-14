@@ -29,7 +29,6 @@ jobs:
           distribution: 'zulu'
           cache: maven
           settings-path: ${{ github.workspace }}/.github
-          overwrite-settings: false
 
       - name: Build and Test
         run: mvn $MVN_CLI_ARGS test
@@ -64,7 +63,6 @@ jobs:
           distribution: 'zulu'
           cache: maven
           settings-path: ${{ github.workspace }}/.github
-          overwrite-settings: false
 
       - name: Package and Upload Artifacts
         run: mvn $MVN_CLI_ARGS package
