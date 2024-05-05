@@ -30,7 +30,6 @@ jobs:
           distribution: 'zulu'
           cache: maven
           settings-path: ${{ github.workspace }}/.github
-          overwrite-settings: false
           gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }} # import GPG private key
 
       - name: Deploy to GitHub Packages & Maven Central
