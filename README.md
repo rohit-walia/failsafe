@@ -3,8 +3,15 @@
 Failsafe is a lightweight, zero-dependency library for handling failures in Java 8+. It works by intercepting failures and
 performing recovery logic via configurable strategies.
 
-This helper library, built as a wrapper around the Failsafe library, aims to streamline the process of handling failures and
-offering a more user-friendly interface for developers to handle failures in Java.
+This helper library aims to streamline the process of handling failures and offering a more user-friendly interface for
+developers to handle failures in Java.
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage Examples](#usage-examples)
+    - [Handling Failures with Retries](#handling-Failures-with-Retries)
+    - [Handling Failures with Fallback](#handling-Failures-with-Fallback)
 
 ## Installation
 
@@ -14,6 +21,7 @@ the [Maven Central Repository](https://central.sonatype.com/artifact/io.github.r
 [GitHub Package Registry](https://github.com/rohit-walia?tab=packages&repo_name=failsafe-helper).
 
 ```xml
+
 <dependency>
     <groupId>io.github.rohit-walia</groupId>
     <artifactId>failsafe-helper</artifactId>
@@ -48,6 +56,7 @@ void retryOnFailureExamples() {
   }, 2, 3);
 }
 ```
+
 See [test](failsafehelper\src\test\java\org\failsafe\failsafe\retry) for more examples.
 
 #### Handling Failures with Fallback
@@ -63,34 +72,18 @@ void fallbackOnFailureExamples() {
 }
 ```
 
-# Tools, libraries, and technologies
+# Dependencies
 
 ### JUnit5
 
-This project uses JUnit5 for testing. Tests can be found [here](failsafehelper/src/test/java/org/failsafe/failsafe).
-See [here](https://junit.org/junit5/docs/current/user-guide/) for more information on JUnit5.
+This project uses [JUnit5](https://junit.org/junit5/docs/current/user-guide/) for testing. Tests can be
+found [here](failsafehelper/src/test/java/org/failsafe/failsafe).
 
 ### Lombok
 
-This project uses lombok to decrease boilerplate code. If you are using Intellij please install the Lombok Plugin. If
-you are using Eclipse STS follow the instructions [here](https://projectlombok.org/setup/eclipse).
-If you are using another IDE you can see if it is supported on the Lombok website [here](https://projectlombok.org).
+This project uses lombok to decrease boilerplate code.
 
 ### Failsafe
 
 Failsafe is the failure handling and retry library used in this project. See [here](https://failsafe.dev/)
 for more information.
-
-### Code Quality
-
-As part of the build, there are several code quality checks running against the code base. All code quality files can be
-found in the root of the project under the [codequality](.codequality) directory.
-
-#### CheckStyle
-
-The project runs checkstyle plugin to validate java code formatting and enforce best coding standards.
-
-#### PMD
-
-The project runs PMD code analysis to find common programming flaws like unused variables, empty catch blocks, unnecessary
-object creation, etc...

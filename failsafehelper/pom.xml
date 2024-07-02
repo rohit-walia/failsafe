@@ -142,8 +142,8 @@
 
     <name>${project.groupId}:${project.artifactId}</name>
     <url>https://github.com/rohit-walia/failsafe-helper</url>
-    <description>This library, built as a wrapper around the Failsafe library, aims to streamline the process of handling
-        failures and offering a more user-friendly interface for developers to handle failures in Java.
+    <description>This library aims to streamline the process of handling failures and offering a more user-friendly interface
+        for developers to handle failures in Java.
     </description>
 
     <licenses>
